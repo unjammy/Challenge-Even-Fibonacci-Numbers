@@ -7,10 +7,20 @@
  */
 function _sumFibs( maxFibValue ) {
   var sum = 0;
-
   // do your work here
 
+  while(fib < maxFibValue){
+    var fib = 0;
+    function fibonacci( n ){
+      if ( n <= 2 ){
+        return 1;
+      } else {
+       return fibonacci( n ) + fibonacci( n-1 );
+      }
+  };
+
   return sum;
+  }
 }
 
 // bonus round
