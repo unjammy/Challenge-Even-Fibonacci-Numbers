@@ -44,11 +44,16 @@ function _highestFibonacciNumber (maxFibValue){
   var highest = 0;
 
   //define your base case, validate your input
-
+  var thisFib = 0;
+  while( fibonacci(thisFib) <= maxFibValue ){
 
   //do your work here
+  highest = fibonacci(thisFib);
+  thisFib++;
 
+  }
   return highest;
+
 };
 
 /**
