@@ -46,6 +46,6 @@ describe( 'Highest number in Fibonacci sequence', function() {
 describe( 'Coolest numbers in Fibonacci sequence', function() {
   it( 'should return the coolest Fibonacci numbers less than the given input in a Array, boiii', function() {
     var coolest = fibonnaciNums.coolestFibonacciNumber( 55 );
-    coolest.should.equal( [ 3, 13, 34 ] );
+    coolest.should.equal( [ 3, 13, 34] );
   });
 });

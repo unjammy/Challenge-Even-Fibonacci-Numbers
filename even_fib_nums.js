@@ -36,7 +36,6 @@ function _sumFibs( maxFibValue ) {
   }
 
   return sum;
-
 }
 
 // bonus round
@@ -65,7 +64,7 @@ function _coolestFibonacciNumbers (maxFibValue){
 
     thisFib = fibonacci(counter).toString();
     if( thisFib.match(3) ){
-      coolest.push( thisFib.valueOf() );
+      coolest.push( parseInt(thisFib) );
     }
     counter++;
   }
