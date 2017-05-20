@@ -5,23 +5,34 @@
  * @param  {Number} maxFibValue
  * @return {Number} sum
  */
+
+function fibonacci( n ){
+
+  if ( n < 2 ){
+    return 1;
+  } else {
+    return fibonacci( n-1 ) + fibonacci( n-2 );
+  }
+
+}
+
 function _sumFibs( maxFibValue ) {
   var sum = 0;
   // do your work here
-  var fib = 0;
-  function fibonacci( n ){
-    if ( n < 2 ){
-     return 1;
-     } else {
-      return fibonacci( n ) + fibonacci( n-1 );
-     }
-  }
-  while( fibonacci(fib) < maxFibValue){
 
-    if( fibonacci(fib) % 2 === 0 ){
-      sum += fibonacci(fib);
+  var counter = 0;
+  var fib = 0;
+
+  while( fibonacci(counter) =< maxFibValue ){
+
+    fib = fibonacci(counter);
+
+    if( fib % 2 === 0 ){
+      sum += fib;
     }
+
     fib++;
+
   }
 
   return sum;
