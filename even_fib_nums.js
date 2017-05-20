@@ -23,7 +23,7 @@ function _sumFibs( maxFibValue ) {
   var counter = 0;
   var fib = 0;
 
-  while( fibonacci(counter) =< maxFibValue ){
+  while( fibonacci(counter) <= maxFibValue ){
 
     fib = fibonacci(counter);
 
@@ -31,7 +31,7 @@ function _sumFibs( maxFibValue ) {
       sum += fib;
     }
 
-    fib++;
+    counter++;
 
   }
 
