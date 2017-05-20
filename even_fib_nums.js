@@ -62,15 +62,14 @@ function _coolestFibonacciNumbers (maxFibValue){
   var counter = 0;
 
   while( fibonacci(counter) < maxFibValue ){
-    thisFib = fibonacci(counter);
-    thisFib.toString();
-    for(var i; i < thisFib.length; i++){
-      if(thisFib[i] === '3'){
-        coolest.push(thisFib);
-      }
+
+    thisFib = fibonacci(counter).toString();
+    if( thisFib.match(3) ){
+      coolest.push( thisFib.valueOf() );
     }
     counter++;
   }
+
   return coolest;
 }
 
