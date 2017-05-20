@@ -56,11 +56,30 @@ function _highestFibonacciNumber (maxFibValue){
 
 };
 
+function _coolestFibonacciNumbers (maxFibValue){
+  var thisFib = 0;
+  var coolest = [];
+  var counter = 0;
+
+  while( fibonacci(counter) < maxFibValue ){
+    thisFib = fibonacci(counter);
+    thisFib.toString();
+    for(var i; i < thisFib.length; i++){
+      if(thisFib[i] === '3'){
+        coolest.push(thisFib);
+      }
+    }
+    counter++;
+  }
+  return coolest;
+}
+
 /**
  * Do not modify code below.
  * You must be at least level 10 to understand.
  */
 module.exports = {
   sumFibs : _sumFibs,
-  highestFibonacciNumber : _highestFibonacciNumber
+  highestFibonacciNumber : _highestFibonacciNumber,
+  coolestFibonacciNumber : _coolestFibonacciNumbers
 };

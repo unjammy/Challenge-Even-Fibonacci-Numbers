@@ -42,3 +42,10 @@ describe( 'Highest number in Fibonacci sequence', function() {
 
 
 //STRETCH GOALS: Define another way you could write a function for a fibonacci number and write passing tests
+
+describe( 'Coolest numbers in Fibonacci sequence', function() {
+  it( 'should return the coolest Fibonacci numbers less than the given input in a Array, boiii', function() {
+    var coolest = fibonnaciNums.coolestFibonacciNumber( 55 );
+    coolest.should.equal( [ 3, 13, 34 ] );
+  });
+});
