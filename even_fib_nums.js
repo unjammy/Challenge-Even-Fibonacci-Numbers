@@ -8,19 +8,24 @@
 function _sumFibs( maxFibValue ) {
   var sum = 0;
   // do your work here
+  var fib = 0;
+  function fibonacci( n ){
+    if ( n < 2 ){
+     return 1;
+     } else {
+      return fibonacci( n ) + fibonacci( n-1 );
+     }
+  }
+  while( fibonacci(fib) < maxFibValue){
 
-  while(fib < maxFibValue){
-    var fib = 0;
-    function fibonacci( n ){
-      if ( n <= 2 ){
-        return 1;
-      } else {
-       return fibonacci( n ) + fibonacci( n-1 );
-      }
-  };
+    if( fibonacci(fib) % 2 === 0 ){
+      sum += fibonacci(fib);
+    }
+    fib++;
+  }
 
   return sum;
-  }
+
 }
 
 // bonus round
